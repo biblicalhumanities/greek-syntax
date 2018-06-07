@@ -22,7 +22,13 @@ The data for these queries comes from these GitHub repos:
 - https://github.com/biblicalhumanities/levinsohn
 - https://github.com/translatable-exegetical-tools/Abbott-Smith
 
+# Building a Docker image
+
+To build a Docker image, use this script:
+
+`build.sh`
+
 # Directory Structure
 
 - *docker* - Files we use to build the Docker container.
-- *greeksyntax* - A Python module that we install in the Docker container.
+- *python* - Source code for the Python module that we install in the Docker container.
