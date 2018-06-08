@@ -17,8 +17,13 @@ RUN apt-get update \
 		jing \
 		libtagsoup-java \
 		libxml-commons-resolver1.1-java \
+                libjline2-java \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+
+ADD assets assets
+ADD github github
+RUN assets/install.sh
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_UID
