@@ -21,21 +21,26 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-# Install BaseX databases from GitHub
+# Install Python package
 
 ADD assets assets
-ADD github github
-RUN assets/install.sh
 RUN cd assets/python && python setup.py install && cd ../..
 
-# Delete files that we don't need any more
-
-RUN rm -rf github
-RUN rm -rf assets
-RUN rm -rf build
+# Install startup script
 
 COPY assets/start-greeksyntax.sh /usr/local/bin
 CMD ["start-greeksyntax.sh"]
 
-# Switch back to jovyan to avoid accidental container runs as root
+# Switch to jovyan and build database
+USER $NB_UID
+ADD github github
+RUN assets/install.sh
+
+# Delete files that we don't need any more
+USER root
+RUN rm -rf github
+RUN rm -rf assets
+RUN rm -rf build
+
+# And leave joyvan as the user at the end
 USER $NB_UID

@@ -7,5 +7,8 @@ setup(
     author = "Jonathan Robie",
     author_email = "jonathan.robie@biblicalhumanities.org",
     packages = ["greeksyntax"],
+    install_requires=[
+          'BaseXClient',
+    ],
 )
 
