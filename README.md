@@ -1,4 +1,13 @@
-Greek Syntax is a Jupyter Notebook environment for querying the Greek New Testament using XQuery, XPath, or Python.
+Greek Syntax is a Jupyter Notebook environment for querying the Greek New Testament using XQuery, XPath, or Python.  It supports queries on syntax trees as well as the base text.
+
+See the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html) for an overview of its capabilities.
+
+The data for these queries comes from these GitHub repos:
+
+- https://github.com/biblicalhumanities/Nestle1904
+- https://github.com/biblicalhumanities/greek-new-testament
+- https://github.com/biblicalhumanities/levinsohn
+- https://github.com/translatable-exegetical-tools/Abbott-Smith
 
 # Getting Started
 
@@ -20,20 +29,13 @@ Most users do not need to use the files in this repository.  Instead, they will 
   ```
 
   Follow the instructions - copy the URL and open it in a web browser. If you changed the port to 8080, change `localhost:8888` to `localhost:8880` in the URL before you open it.
-- **TODO**
 
-Now you can learn how to use Greek Syntax using [this tutorial **TODO**]().
+
+Now you can learn how to use Greek Syntax using the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
 
 # Implementation
 
 Greek Syntax is implemented as a Docker container based on [`jupyter/minimal-notebook`](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook). It uses the marvelous [BaseX](basex.org) database for all XML processing and querying.
-
-The data for these queries comes from these GitHub repos:
-
-- https://github.com/biblicalhumanities/Nestle1904
-- https://github.com/biblicalhumanities/greek-new-testament
-- https://github.com/biblicalhumanities/levinsohn
-- https://github.com/translatable-exegetical-tools/Abbott-Smith
 
 # Building a Docker image
 
