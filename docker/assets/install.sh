@@ -8,7 +8,7 @@ mkdir build/gnt/discourse
 mkdir build/gnt/nestle1904lowfat
 mkdir build/lexicon
 
-# Expand and put in the target directory structure using XInclude
+# Expand and put in the gnt directory structure using XInclude
 
 basex -i 'github/greek-new-testament/syntax-trees/nestle1904-lowfat/xml/nestle1904lowfat.xml' '/' >build/gnt/nestle1904lowfat/nestle1904lowfat.xml
 basex -i 'github/Nestle1904/xml/nestle1904.xml' '/' >build/gnt/nestle1904/nestle1904.xml
