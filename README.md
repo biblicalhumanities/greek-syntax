@@ -1,3 +1,5 @@
+# The Greek Syntax Jupyter Notebook Environment
+
 Greek Syntax is a Jupyter Notebook environment for querying the Greek New Testament using XQuery, XPath, or Python.  It supports queries on syntax trees as well as the base text.
 
 See the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html) for an overview of its capabilities.
