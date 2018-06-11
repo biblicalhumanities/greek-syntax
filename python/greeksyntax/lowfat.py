@@ -10,6 +10,9 @@ from IPython.display import HTML
 
 from pkg_resources import resource_string
 
+def get_resource(name):
+	return resource_string(__name__, name).decode("utf-8")
+
 def pretty(xml):
 	formatter = HtmlFormatter()
 	display(
@@ -193,16 +196,16 @@ class lowfat:
 		self.show(self._xquery(interlinear_query_string(query, count)))
 
 	def boxwood(self, query):
-		treedown = resource_string(__name__, 'treedown.css')
-		boxwood = resource_string(__name__, 'boxwood.css')
+		treedown = get_resource('treedown.css')
+		boxwood = get_resource('boxwood.css')
 		css_display(treedown+boxwood, self._xquery(query))
 
 	def treedown(self, query, box=False, rules=False):
-		css = resource_string(__name__, 'treedown.css')
+		css = get_resource('treedown.css')
 		if box:
-                	css += resource_string(__name__, 'boxwood.css')
+			css += get_resource('boxwood.css')
 		if rules:
-			css += resource_string(__name__, 'rules.css')
+			css += get_resource('rules.css')
 		css_display(css, self._xquery(query))
 
 	def show(self, html):

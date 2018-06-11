@@ -1,3 +1,5 @@
+/* rules.css */
+
 wg[rule]::before {
   color: blue;
   content: attr(role) " " attr(rule);

@@ -11,8 +11,6 @@ else
 	popd
 fi
 
-if [ ! -e assets/python ]; then
-	cp -r ../python assets
-fi
+cp -r ../python assets
 
 docker build -t biblicalhumanities/greek-syntax .
