@@ -8,6 +8,8 @@ from pygments.lexers import XmlLexer
 from pygments.formatters import HtmlFormatter
 from IPython.display import HTML
 
+from pkg_resources import resource_string
+
 def pretty(xml):
 	formatter = HtmlFormatter()
 	display(
@@ -191,18 +193,16 @@ class lowfat:
 		self.show(self._xquery(interlinear_query_string(query, count)))
 
 	def boxwood(self, query):
-		cwd = os.path.dirname(os.path.abspath(__file__))+'/'
-		treedown = open(cwd+'/'+'treedown.css', 'r').read()
-		boxwood = open(cwd+'/'+'boxwood.css', 'r').read()
+		treedown = resource_string(__name__, 'treedown.css')
+		boxwood = resource_string(__name__, 'boxwood.css')
 		css_display(treedown+boxwood, self._xquery(query))
 
 	def treedown(self, query, box=False, rules=False):
-		cwd = os.path.dirname(os.path.abspath(__file__))+'/'
-		css = open(cwd+'/'+'treedown.css', 'r').read()
+		css = resource_string(__name__, 'treedown.css')
 		if box:
-			css = css + open(cwd+'/'+'boxwood.css', 'r').read()
+                	css += resource_string(__name__, 'boxwood.css')
 		if rules:
-			css = css + open(cwd+'/'+'rules.css', 'r').read()
+			css += resource_string(__name__, 'rules.css')
 		css_display(css, self._xquery(query))
 
 	def show(self, html):
