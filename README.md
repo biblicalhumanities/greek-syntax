@@ -24,7 +24,7 @@ Most users do not need to use the files in this repository.  Instead, they will 
   
   The `-p` option maps a container's port to a port on your local machine.  In this case, we map the container's port `8888` to the local machine's port `8888`. If you get an error message saying that port 8888 is already in use on your computer, try `-p 8880:8888`, which maps to port 8880 instead. If that's already in use, try 8881, 8882, etc.
 
-  When it runs, you will see a message with a URL to put in a web browser:
+- When it runs, you will see a message with a URL to put in a web browser:
 
   ```
     Copy/paste this URL into your browser when you connect for the first time,
@@ -34,8 +34,7 @@ Most users do not need to use the files in this repository.  Instead, they will 
 
   Follow the instructions - copy the URL and open it in a web browser. If you changed the port to 8080, change `localhost:8888` to `localhost:8880` in the URL before you open it.
 
-
-Now you can learn how to use Greek Syntax using the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
+- Now you can learn how to use Greek Syntax using the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
 
 # Implementation
 
