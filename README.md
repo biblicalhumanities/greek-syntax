@@ -37,7 +37,16 @@ Most users do not need to use the files in this repository.  Instead, they will 
         http://localhost:8888/?token=431d559093f580607f51cc1ed0dd3d86db0abc743c2d049e
   ```
 
-  Follow the instructions - copy the URL and open it in a web browser. If you changed the port to 8080, change `localhost:8888` to `localhost:8880` in the URL before you open it.
+  Follow the instructions - copy the URL into the address bar of a web browser. If you changed the port to 8080, change `localhost:8888` to `localhost:8880` in the URL before you open it.
+
+-  You should see a directory tree that looks like this:
+
+   <img src='./img/Directories.png' />
+
+   Click on the `work` directory and you will see a list of files.  Open the Greek Syntax Tutorial.
+
+   <img src='./img/GreekSyntaxTutorial.png' width="50%" align="left"/>
+
 
 - Now you can learn how to use Greek Syntax using the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
 
