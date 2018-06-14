@@ -45,7 +45,7 @@ Most users do not need to use the files in this repository.  Instead, they will 
 
    Click on the `work` directory and you will see a list of files.  Open the Greek Syntax Tutorial, which will teach you the basics.
 
-   <img src='./img/GreekSyntaxTutorial.png' width="50%" align="left"/>
+   <img src='./img/GreekSyntaxTutorial.png' width="50%"/>
 
 
 # Implementation
