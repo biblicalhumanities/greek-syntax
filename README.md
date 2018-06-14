@@ -43,11 +43,10 @@ Most users do not need to use the files in this repository.  Instead, they will 
 
    <img src='./img/Directories.png' />
 
-   Click on the `work` directory and you will see a list of files.  Open the Greek Syntax Tutorial.
+   Click on the `work` directory and you will see a list of files.  Open the Greek Syntax Tutorial, which will teach you the basics.
 
    <img src='./img/GreekSyntaxTutorial.png' width="50%" align="left"/>
 
-Now you can learn how to use Greek Syntax using the [Greek Syntax tutorial](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
 
 # Implementation
 
