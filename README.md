@@ -16,6 +16,9 @@ The data for these queries comes from these GitHub repos:
 Most users do not need to use the files in this repository.  Instead, they will use the docker image from Docker Hub.
 
 - [Install Docker](https://docs.docker.com/install/)
+
+- If you are running on Windows, you must [switch to Linux containers](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers) in Docker before running the container.
+
 - Run this command from the command line:
 
   ```
