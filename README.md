@@ -25,7 +25,7 @@ Most users do not need to use the files in this repository.  Instead, they will 
   $ docker run -v ${PWD}:/home/jovyan/work -p 8888:8888 biblicalhumanities/greek-syntax
   ```
   
-  **On Windows Systems** you can either use the above command with PowerShell or use `%cd` instead of `${PWD}` in the above command.
+  **Windows Users**: On Windows Systemsyou can either use the above command with PowerShell or use `%cd` instead of `${PWD}` in the above command.
   
   The `-v` option tells Docker to make your host machine's local directory available to the Docker container so you can mount and save notebooks.
   
