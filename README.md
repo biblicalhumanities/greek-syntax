@@ -25,6 +25,8 @@ Most users do not need to use the files in this repository.  Instead, they will 
   $ docker run -v ${PWD}:/home/jovyan/work -p 8888:8888 biblicalhumanities/greek-syntax
   ```
   
+  **On Windows Systems** you can either use the above command with PowerShell or use `%cd` instead of `${PWD}` in the above command.
+  
   The `-v` option tells Docker to make your host machine's local directory available to the Docker container so you can mount and save notebooks.
   
   The `-p` option maps a container's port to a port on your local machine.  In this case, we map the container's port `8888` to the local machine's port `8888`. If you get an error message saying that port 8888 is already in use on your computer, try `-p 8880:8888`, which maps to port 8880 instead. If that's already in use, try 8881, 8882, etc.
