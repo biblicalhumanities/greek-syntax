@@ -117,4 +117,36 @@ w[role] {
     padding-left: 1em;
 }
 
+w[case=vocative]::before {
+  color: cadetblue;
+  content: "voc" " ";
+  size: small;
+}
+
+w[case=vocative] {
+    position: relative;
+    display: block;
+    padding-left: 1em;
+}
+
+
 /* -----  Experimental stuff goes here -------- */
+
+/* Apposition */
+
+
+wg[rule=Np-Appos]:not(:first-child)::before {
+    content: ":";
+    color: cadetblue;
+    size: small;
+    padding-left: 1em;
+}
+
+wg[rule=Np-Appos]:not(:first-child) {
+    display: block;
+}
+
+wg[role=cl] pc::before {
+    content: initial;
+}
+
