@@ -13,7 +13,11 @@ The data for these queries comes from these GitHub repos:
 
 # Getting Started
 
-Most users do not need to use the files in this repository.  Instead, they will use the docker image from Docker Hub.
+There are two ways to install this package.  You can either install it directly on your computer or use a Docker image (which is easier, but apparently does not work on some operating systems).
+
+## Installing with Docker
+
+If it works on your computer, the easiest way to install is to use the Docker image.  First, install Docker:
 
 - [Install Docker](https://docs.docker.com/install/)
 
@@ -49,6 +53,31 @@ Most users do not need to use the files in this repository.  Instead, they will 
 
    <img src='./img/GreekSyntaxTutorial.png' width="50%"/>
 
+## Installing Greek Syntax, Jupyter, and BaseX Directly
+
+You can also use Greek Syntax directly on your computer without Docker.  You need the Greek Syntax package, Jupyter, and BaseX.  There is a script that installs the data into BaseX.
+
+- First, clone this repository:
+
+  ```
+  $ repos: git clone https://github.com/biblicalhumanities/greek-syntax
+  ```
+
+  Then go to the `greek-syntax/python` directory and install the package as follows:
+
+  ```
+  $ python: python setup.py install
+  ```
+  
+- Install Jupyter using [these instructions](https://jupyter.org/install).
+
+- Install BaseX using [from here](http://basex.org/download/).
+
+- Download data from repositories and load it into the database using the `data/load_data.sh` script:
+
+  ```
+  $ data: ./load_data.sh 
+  ```
 
 # Implementation
 
