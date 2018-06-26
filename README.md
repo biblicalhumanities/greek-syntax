@@ -57,7 +57,7 @@ If it works on your computer, the easiest way to install is to use the Docker im
 
 You can also use Greek Syntax directly on your computer without Docker.  You need the Greek Syntax package, Jupyter, and BaseX.  There is a script that installs the data into BaseX.
 
-- First, clone this repository:
+- Clone this repository using `git`:
 
   ```
   $ repos: git clone https://github.com/biblicalhumanities/greek-syntax
@@ -78,6 +78,31 @@ You can also use Greek Syntax directly on your computer without Docker.  You nee
   ```
   $ data: ./load_data.sh 
   ```
+  
+- Go to the `notebooks` directory and start Jupyter:
+
+  ```
+  $ notebooks: jupyter notebook
+  ```
+  
+  You will see a message like this:
+  
+  ```
+      Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8890/?token=00cdcc7b167d94d2ceac84fe38d0fcfff17a76ae921c12ad
+  ```
+  
+  Do what it says - copy the URL into a web browser.
+  
+
+-  You should see a directory tree that looks like this:
+
+   <img src='./img/NotebooksDirectory.png' />
+
+   Click on the `work` directory and you will see a list of files.  Open the Greek Syntax Tutorial, which will teach you how to use the Greek Syntax package in a Jupyter Notebook.
+
+   <img src='./img/GreekSyntaxTutorial.png' width="50%"/>
 
 # Implementation
 
