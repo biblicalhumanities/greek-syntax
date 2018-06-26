@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 if [ -e github ]; then
 	echo "Using existing local repositories"
 else
@@ -13,7 +16,7 @@ fi
 
 # Build the directory structure for the gnt repo.
 
-if [ -e github ]; then
+if [ -e build ]; then
 	echo "Using existing build directory"
 else
 	mkdir build
@@ -21,6 +24,7 @@ else
 	mkdir build/gnt/nestle1904
 	mkdir build/gnt/discourse
 	mkdir build/gnt/nestle1904lowfat
+	mkdir build/lexicon
 	mkdir build/lexicon
 fi
 
