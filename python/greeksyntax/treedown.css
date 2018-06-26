@@ -64,15 +64,28 @@ wg[class=cl] {
   display: block;
 }
 
+/*
+
+This was intended to be used to flag things as adjuncts if not marked. Not sure we need this, commenting out for now.
+
 *[role] ~ *::before {
   color: cadetblue;
   content: "+";
   size: small;
 }
 
+*/
+
 wg[role]::before {
   color: cadetblue;
   content: attr(role);
+  size: small;
+}
+
+
+wg[role=adv]::before {
+  color: cadetblue;
+  content: "+";
   size: small;
 }
 
@@ -103,6 +116,12 @@ w[role]::before {
   size: small;
 }
 
+w[role=adv]::before {
+  color: cadetblue;
+  content: "+";
+  size: small;
+}
+
 w[discontinuous]::after {
   content: "*";
   vertical-align: super;
@@ -117,6 +136,7 @@ w[role] {
     padding-left: 1em;
 }
 
+
 w[case=vocative]::before {
   color: cadetblue;
   content: "voc" " ";
@@ -129,20 +149,22 @@ w[case=vocative] {
     padding-left: 1em;
 }
 
-
+w[class=conj] {
+   padding-left: 1em;
+}
 /* -----  Experimental stuff goes here -------- */
 
 /* Apposition */
 
 
-wg[rule=Np-Appos]:not(:first-child)::before {
+wg[rule=Np-Appos] > wg:not(:first-child)::before {
     content: ":";
     color: cadetblue;
     size: small;
     padding-left: 1em;
 }
 
-wg[rule=Np-Appos]:not(:first-child) {
+wg[rule=Np-Appos] > wg:not(:first-child) {
     display: block;
 }
 
@@ -150,3 +172,9 @@ wg[role=cl] pc::before {
     content: initial;
 }
 
+/*
+wg[rule=Np-Appos]::before {
+    content: "[";
+    color: cadetblue;   
+}
+*/
