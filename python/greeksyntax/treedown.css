@@ -134,7 +134,7 @@ wg[rule=Np-Appos] > wg:not(:first-child)::before,
 wg[rule=Np-Appos] > w:not(:first-child)::before {
     content: ": ";
     color: cadetblue;
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 wg[rule=Np-Appos] > wg:not(:first-child),
@@ -161,6 +161,6 @@ pc::before {
 /* ------ Left spacing --------- */
 
 wg[class=cl] {
-  padding-left: 1em;
+  margin-left: 1em;
   position: relative;
 }
