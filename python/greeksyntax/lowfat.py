@@ -13,13 +13,6 @@ from pkg_resources import resource_string
 def get_resource(name):
 	return resource_string(__name__, name).decode("utf-8")
 
-def pretty(xml):
-	formatter = HtmlFormatter()
-	display(
-		HTML('<style type="text/css">{}</style>{}'.format (
-			formatter.get_style_defs('.highlight'),
-			highlight(xml, XmlLexer(), formatter))))
-
 def milestone(m):
 	if m.count("!") == 1:
 		return "//w[@osisId='" + m + "']"
@@ -147,6 +140,13 @@ def interlinear_query_string(query, count):
 	  </table>"""
 
 
+def pretty(xml):
+	formatter = HtmlFormatter()
+	display(
+		HTML('<style type="text/css">{}</style>{}'.format (
+			formatter.get_style_defs('.highlight'),
+			highlight(xml, XmlLexer(), formatter))))
+
 
 class lowfat:
 	session = {}
@@ -169,8 +169,12 @@ class lowfat:
 			else:
 				return "No results."
 
-	def xquery(self, query):
-		print(self._xquery(query))
+	def xquery(self, query, p=False):
+		xml = self._xquery(query)
+		if p:
+			print(xml)
+		else:
+			pretty(xml)
 
 	def count(self, query):
 		self.show(self._xquery('count(' + query + ')'))
