@@ -8,7 +8,7 @@ setup(
     author_email = "jonathan.robie@biblicalhumanities.org",
     packages = ["greeksyntax"],
     package_data = {
-	"greeksyntax" : "greeksyntax/*.css",
+	"greeksyntax" : ["greeksyntax/*.css"],
     },
     install_requires=[
           'BaseXClient',
